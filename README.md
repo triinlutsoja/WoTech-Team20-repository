@@ -6,3 +6,17 @@ Meet the dynamic quartet of ladies from our GitHub group, united by a passion fo
 We are eager to delve into the world of coding and development together, bringing diverse skills and boundless enthusiasm to every project. 
 
 On your mark, get set and go!
+
+_ _ _ _ _
+
+Let's get familiar. 
+(❁´◡`❁)
+
+
+Why did the computer go to the doctor?
+Because it had a virus! 😂
+
+I am Lasma, with background from the business world and I am ready to embark on a new journey in IT. 
+With a strong desire to learn, collaborate actively, and grow alongside fellow women in tech, I can bring enthusiasm and determination to every challenge. 
+Joining this group promises to boost my energy and accelerate my skills, ensuring mutual success and empowerment.
+
