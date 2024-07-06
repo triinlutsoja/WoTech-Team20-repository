@@ -23,3 +23,5 @@ Joining this group promises to boost my energy and accelerate my skills, ensurin
 I'm Triin. This is my introcotion place holder. :) TESTING: This sentence is added on Triin's local machine by just opening the file on my computer with Visual Studio Code and saving it, later planning to use the Github Desktop app to "push" this change to guthub so that all of the team members can see it.
 
 Hello! I am Liisa, my daily work background is in retail and purchase work, product assortment and analysis etc. I also want to start a new career. The IT field seems so big and broad that maybe I can fit in too.
+
+<>
