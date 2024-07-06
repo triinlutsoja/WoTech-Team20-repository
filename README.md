@@ -16,7 +16,7 @@ Let's get familiar.
 Why did the computer go to the doctor?
 Because it had a virus! 😂
 
-I am Lasma, with background from the business world and I am ready to embark on a new journey in IT. 
-With a strong desire to learn, collaborate actively, and grow alongside fellow women in tech, I can bring enthusiasm and determination to every challenge. 
+I am Lasma, coming from a background in the business world, and I am ready to embark on a new journey in IT. 
+With a strong desire to learn, actively collaborate, and grow alongside fellow women in tech, I bring enthusiasm and determination to every challenge. 
 Joining this group promises to boost my energy and accelerate my skills, ensuring mutual success and empowerment.
 
