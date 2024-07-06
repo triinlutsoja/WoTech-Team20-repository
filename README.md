@@ -20,4 +20,4 @@ I am Lasma, coming from a background in the business world, and I am ready to em
 With a strong desire to learn, actively collaborate, and grow alongside fellow women in tech, I bring enthusiasm and determination to every challenge. 
 Joining this group promises to boost my energy and accelerate my skills, ensuring mutual success and empowerment.
 
-I'm Triin. This is my introcotion place holder. :) 
+I'm Triin. This is my introcotion place holder. :) TESTING: This sentence is added on Triin's local machine by just opening the file on my computer with Visual Studio Code and saving it, later planning to use the Github Desktop app to "push" this change to guthub so that all of the team members can see it.
