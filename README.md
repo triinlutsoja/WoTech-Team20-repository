@@ -24,4 +24,6 @@ I'm Triin. This is my introcotion place holder. :) TESTING: This sentence is add
 
 Hello! I am Liisa, my daily work background is in retail and purchase work, product assortment and analysis etc. I also want to start a new career. The IT field seems so big and broad that maybe I can fit in too.
 
+Hi, this is Kintija. I'm trying out Triin's method for adding changes, but I'm using notepad to edit text instead.
+
 <>
