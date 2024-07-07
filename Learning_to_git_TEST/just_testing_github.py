@@ -9,9 +9,9 @@ multiple people working on the same file together.
 """)
 
 def random_action(number):
-    result = number - 5 + 9
+    result = number * 35 - 109
     return result
 
 nr = 12
 outcome = random_action(nr)
-print(f"The result of the method is: {outcome}")
+print(f"      * The result of the method is: {outcome}")
