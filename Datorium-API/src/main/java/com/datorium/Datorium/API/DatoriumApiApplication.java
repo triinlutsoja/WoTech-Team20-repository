@@ -43,7 +43,6 @@ public class DatoriumApiApplication {
 	public String[] array(@RequestParam(value="string1") String string1, @RequestParam(value="string2") String string2) {
 		String[] stringArray = {string1, string2};
 		return stringArray;
-
 	}
 
 
