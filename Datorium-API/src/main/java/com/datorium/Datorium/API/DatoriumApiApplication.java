@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @SpringBootApplication
 @RestController
 @CrossOrigin
@@ -44,6 +47,18 @@ public class DatoriumApiApplication {
 		String[] stringArray = {string1, string2};
 		return stringArray;
 	}
+	@GetMapping("/cheese")
+	public Map<String, Object> getCheese(
+			@RequestParam(value="Name") String string1,
+			@RequestParam(value="Country") String string2,
+			@RequestParam(value="Age") String string3) {
 
+		Map<String, Object> stringCheese = new HashMap<>();
+		stringCheese.put("Atleet", string1);
+		stringCheese.put("Estonia", string2);
+		stringCheese.put("1", string3);
+
+		return stringCheese;
+	}
 
 }
