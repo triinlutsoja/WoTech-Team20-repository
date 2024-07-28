@@ -12,12 +12,18 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import java.util.ArrayList;
+
 @SpringBootApplication
 @RestController
 @CrossOrigin
 public class DatoriumApiApplication {
 
+
+	ArrayList<Wine> wineList = new ArrayList<>();
+
 	ArrayList<Chocolate> chocolateBasket = new ArrayList<>();
+
 
 	public static void main(String[] args) {
 		System.out.println("asd");
@@ -66,6 +72,32 @@ public class DatoriumApiApplication {
   	return stringCheese;
 	}
 
+	@GetMapping("/array")  // example: http://localhost:8080/array?string1=Estonia&string2=Latvia
+	public String[] array(@RequestParam(value="string1") String string1, @RequestParam(value="string2") String string2) {
+		return new String[]{string1, string2};
+	}
+
+	@GetMapping("/add-wine")
+	public String addWine(@RequestParam(value="name") String name, @RequestParam(value="price") double price) {  // method to create new wine
+		Wine wine = new Wine();
+		wine.setName(name);
+		wine.setPrice(price);
+		wineList.add(wine);
+		return "You have just added a new wine to the assortment: " + wine.getName() + " " + wine.getPrice() + " €.";
+	}
+
+	@GetMapping(value = "/wine-assortment", produces = "text/plain")
+	public String wineAssortment() {
+		if (!wineList.isEmpty()) {
+			StringBuilder assortment = new StringBuilder();
+			for (Wine w : wineList) {
+				assortment.append(w.getName()).append(" ").append(w.getPrice()).append(" €").append("\n");
+			}
+			return assortment.toString().trim();
+		}
+		return "No wines found.";
+	}
+
 	@GetMapping("/my-chocolate")
 	public String addChocolate(
 			@RequestParam(value = "name") String name,
@@ -89,3 +121,4 @@ public class DatoriumApiApplication {
 		return "No chocolates in your basket.";
 	}
 }
+
