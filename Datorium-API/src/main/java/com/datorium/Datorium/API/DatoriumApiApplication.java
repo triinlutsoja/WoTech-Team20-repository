@@ -49,9 +49,9 @@ public class DatoriumApiApplication {
 	}
 	@GetMapping("/cheese")
 	public Map<String, Object> getCheese(
-			@RequestParam(value="Atleet") String string1,
-			@RequestParam(value="Estonia") String string2,
-			@RequestParam(value="1") String string3) {
+			@RequestParam(value="Name") String string1,
+			@RequestParam(value="Country") String string2,
+			@RequestParam(value="Age") String string3) {
 
 		Map<String, Object> stringCheese = new HashMap<>();
 		stringCheese.put("Atleet", string1);
