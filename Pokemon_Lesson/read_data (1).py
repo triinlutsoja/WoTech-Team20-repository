@@ -49,30 +49,3 @@ def get_speed_difference(df, Speed):
 
 speed_difference = get_speed_difference(df, 'Speed')
 print(f"The difference is: {speed_difference}")
-
-from Pokemon.csv import read_csv
-from get_max_speed import get_max_speed
-from get_min_speed import get_min_speed
-from get_speed_difference import get_speed_difference
-from utils import get_percentage_of_type
-
-def main():
-    file_path = '/content/Pokemon.csv'
-    df = read_csv(file_path)
-
-    # Step 2: Get the percentage of Water-type Pokémon
-    water_percentage = get_percentage_of_type(df, 'Type 1', 'Water')
-    print(f"Percentage of Water-type Pokémons: {water_percentage:.2f}%")
-
-    # Step 3: Get the maximum speed
-    max_speed = get_max_speed(df, 'Speed')
-    print(f"The maximum Speed value is: {max_speed}")
-
-    # Step 4: Get the difference in speed
-    speed_difference = get_speed_difference(df, 'Speed')
-    print(f"The difference between the maximum and minimum Speed values is: {speed_difference}")
-
-if __name__ == "__main__":
-    main()
-
-python main.py
