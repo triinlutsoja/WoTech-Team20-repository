@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="918eb97e-5587-407c-a025-39a9bf24e25d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/transaction_dataset.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/copy_of_gender.py" beforeDir="false" afterPath="$PROJECT_DIR$/copy_of_gender.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,14 +38,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;lesson-14/Kintija-clean__data&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/triinlutsoja/Documents/IT_teemad/WoTech-Team20/WoTech-Team20-repository/Python-Task1&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Educational&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.copy_of_gender.executor": "Run",
+    "Python.main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "python/lesson-14",
+    "last_opened_file_path": "/Users/triinlutsoja/Documents/IT_teemad/WoTech-Team20/WoTech-Team20-repository/Python-Task1",
+    "settings.editor.selected.configurable": "Educational"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
