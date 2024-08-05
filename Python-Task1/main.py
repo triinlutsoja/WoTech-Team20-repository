@@ -1,6 +1,6 @@
 from read_data import read_csv
 from clean_data import process_data
-from chart import create_barchart  # I don't know what Liisa will name her file or method, yet.
+from gender import create_barchart   # Liisa hasn't created a method yet, I randomly name the method here
 
 # Define the path to the CSV file
 file_path = 'transaction_dataset.csv'
