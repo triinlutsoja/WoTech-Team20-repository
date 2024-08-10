@@ -1,10 +1,10 @@
 def get_max_speed(df, Speed):
-    return df[column].max()
     max_speed = get_max_speed(df, 'Speed')
+    return df[column].max()
 
 def get_min_speed(df, Speed):
-    return df[Speed].min()
     min_speed = get_min_speed(df, 'Speed')
+    return df[Speed].min()
 
 
 def get_speed_difference(df, Speed):
