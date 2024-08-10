@@ -6,7 +6,6 @@ def get_min_speed(df, Speed):
     return df[Speed].min()
     min_speed = get_min_speed(df, 'Speed')
 
-print(f"The minimum Speed value is: {min_speed}")
 
 def get_speed_difference(df, Speed):
  max_value = df[Speed].max()
