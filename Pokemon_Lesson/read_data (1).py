@@ -1,7 +1,10 @@
-def get_max_value(df, column):
-    return df[column].max()
+def max_speed(df):
+    max_speed= df['Speed'].max()
+    return max_speed
 
 
-def get_value_difference(df, column):
-    difference = get_max_value(df, column) - min_speed(df)
+def difference(df):
+    difference = max_speed(df) - min_speed(df)
     return difference
+
+
