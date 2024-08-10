@@ -11,29 +11,29 @@ from visualize_data import create_barh_chart
 file_path = 'Pokemon.csv'
 
 # Read the CSV file
-data = read_csv(file_path)
+dataframe = read_csv(file_path)
 
 # Calculate the percentage of Water-type Pokémon
-water_percentage = pokemon_water_percentage(data)
+water_percentage = pokemon_water_percentage(dataframe)
 
 # Calculate the minimum speed
-min_speed_value = min_speed(data)
+min_speed_value = min_speed(dataframe)
 
 # Calculate the maximum speed
-max_speed_value = max_speed(data)
+max_speed_value = max_speed(dataframe)
 
 # Calculate the difference between max and min speed
-speed_difference = difference(data)
+speed_difference = difference(dataframe)
 
 # Get the length of the DataFrame
-data_length = check_len(data)
+data_length = check_len(dataframe)
 
 # Filter Pokémon by speed threshold and print the number of filtered Pokémon
 speed_threshold = 80
 filtered_data = filter_greater_than_or_equal(data, 'Speed', speed_threshold)
 
 # Find the longest Pokémon name
-longest_pokemon_name = check_name(data, 'Name')
+longest_pokemon_name = check_name(dataframe, 'Name')
 
 # Create a horizontal bar chart of Pokémon speeds
-create_barh_chart(data, x_column='Name', y_column='Speed', df_title='Speed of Pokémon')
+create_barh_chart(dataframe, x_column='Name', y_column='Speed', df_title='Speed of Pokémon')
