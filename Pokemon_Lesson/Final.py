@@ -2,8 +2,8 @@ from read_data import read_csv
 from pokemon_water_type import pokemon_water_percentage
 from pokemon_speed_value import min_speed
 from speed_value import max_speed, difference
-from dataframe_length import check_len
 from filter_data import filter_greater_than_or_equal
+from dataframe_length import check_len
 from longest_name import check_name
 from visualize_data import create_barh_chart
 
