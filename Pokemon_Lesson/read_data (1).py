@@ -3,5 +3,5 @@ def get_max_value(df, column):
 
 
 def get_value_difference(df, column):
-    difference = get_max_value(df, column) - min_speed(df, column)
+    difference = get_max_value(df, column) - min_speed(df)
     return difference
