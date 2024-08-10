@@ -2,11 +2,14 @@ import pandas as pd
 from max_min_difference import get_max_value, get_min_value, get_value_difference
 from percentage import percentage_of_type
 from dataframe_operations import check_len
-from csv_reader import read_csv
+from read_data import read_csv
 from filtering import filter_greater_than_or_equal
 from visualization import create_barh_chart
 
+# Step 1: read document
+file_path = "Pokemon.csv"
 df = read_csv(file_path)
+
 
 num_pokemons = check_len(df)
 
