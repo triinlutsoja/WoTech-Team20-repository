@@ -1,5 +1,5 @@
 import pandas as pd
-from max_min_difference import get_max_value, get_min_value, get_value_difference
+from max_min_difference import get_max_value, min_speed, get_value_difference
 from percentage import percentage_of_type
 from dataframe_operations import check_len
 from csv_reader import read_csv
@@ -17,7 +17,7 @@ filtered_df = filter_greater_than_or_equal(df, 'Speed', speed_threshold)
 print(f"Number of Pokémon with Speed >= {speed_threshold}: {check_len(filtered_df)}")
 
 max_speed = get_max_value(filtered_df, 'Speed')
-min_speed = get_min_value(filtered_df, 'Speed')
+min_speed = min_speed(filtered_df, 'Speed')
 speed_difference = get_value_difference(filtered_df, 'Speed')
 
 print(f"Max Speed: {max_speed}")
