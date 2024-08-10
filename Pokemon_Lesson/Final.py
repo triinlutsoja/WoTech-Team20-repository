@@ -25,12 +25,12 @@ max_speed_value = max_speed(dataframe)
 # Calculate the difference between max and min speed
 speed_difference = difference(dataframe)
 
-# Get the length of the DataFrame
-data_length = check_len(dataframe)
-
 # Filter Pokémon by speed threshold and print the number of filtered Pokémon
 speed_threshold = 80
 filtered_data = filter_greater_than_or_equal(data, 'Speed', speed_threshold)
+
+# Get the length of the DataFrame
+data_length = check_len(dataframe)
 
 # Find the longest Pokémon name
 longest_pokemon_name = check_name(dataframe, 'Name')
