@@ -4,7 +4,7 @@ def max_speed(df):
 
 
 def difference(df):
-    difference = max_speed(df) - min_speed(df)
+    difference = max_speed(df) - df['Speed'].min()
     return difference
 
 

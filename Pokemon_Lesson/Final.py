@@ -27,13 +27,13 @@ speed_difference = difference(dataframe)
 
 # Filter Pokémon by speed threshold and print the number of filtered Pokémon
 speed_threshold = 80
-filtered_data = filter_greater_than_or_equal(data, 'Speed', speed_threshold)
+filtered_data = filter_greater_than_or_equal(dataframe, 'Speed', speed_threshold)
 
-# Get the length of the DataFrame
-data_length = check_len(dataframe)
+# Get the length of the DataFrame = How many pokemons meet the criterion?
+data_length = check_len(filtered_data)
 
 # Find the longest Pokémon name
 longest_pokemon_name = check_name(dataframe, 'Name')
 
 # Create a horizontal bar chart of Pokémon speeds
-create_barh_chart(dataframe, x_column='Name', y_column='Speed', df_title='Speed of Pokémon')
+create_barh_chart(filtered_data, x_column='Name', y_column='Speed', df_title='Speed of Pokémon')
