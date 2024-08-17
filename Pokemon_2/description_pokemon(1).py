@@ -1,3 +1,8 @@
+#METHOD TO COMPARE TWO COEFFICIENTS
+#STRINGS = POKEMON TYPE
+#FLOATS = COEFFICIENT
+#VALUES = COLUMN NAMES
+
 def correlation_comparison(string_a, float_a, string_b, float_b, value_a, value_b):
   if float_a > 0 and float_b > 0:
     print(f'Both {string_a} and {string_b} show positive correlation between {value_a} and {value_b}.')
@@ -21,6 +26,9 @@ def correlation_comparison(string_a, float_a, string_b, float_b, value_a, value_
   elif float_a < 0 and float_b < 0:
     print(f'Both {string_a} and {string_b} show negative correlation between {value_a} and {value_b}.')
 
+#METHOD TO GET DETAILED ANALYSIS OF ONE COEFFICIENT
+#VALUES = COLUMN NAMES
+#CORRELATION = COEFFICIENT
 def correlation_individual(correlation, value_a, value_b):
   if correlation > 0.5:
     print(f'There is strong positive correlation between {value_a} and {value_b}.')
