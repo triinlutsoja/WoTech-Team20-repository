@@ -4,9 +4,8 @@ package com.datorium.Datorium.API;
 //import CheeseShopRepository
 import org.springframework.stereotype.Service;
 import java.util.List;
-import java.util.Optional;
 
-
+@Service
 public class CheeseShopService {
 
     //CheeseShopRepository used
@@ -24,11 +23,6 @@ public class CheeseShopService {
     //Cheese used
     public List<Cheese> getAll() {
         return repository.findAll();
-    }
-
-    public Cheese getById(Long id) {
-        return repository.findById(id)
-                .orElseThrow(() -> new RuntimeException("This cheese is currently not available."));
     }
 
     public Cheese updateCheese(Long id, Cheese updatedCheese) {
