@@ -2,8 +2,8 @@ from read_dataframe import read_csv
 from filter_dataframe import filter_dataframe
 from create_regression_plot import create_reg_plot
 from calculate_pearson_correlation import calculate_pearson_correlation
-from description_pokemon(1) import correlation_comparison
-from description_pokemon(1) import correlation_individual
+from description_pokemon import correlation_comparison
+from description_pokemon import correlation_individual
 
 
 
