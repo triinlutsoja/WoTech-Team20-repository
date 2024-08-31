@@ -1,0 +1,42 @@
+package com.datorium.Datorium.API.REPO;
+
+import com.datorium.Datorium.API.DTOs.Cheese;
+import java.util.ArrayList;
+
+public class CheeseShopRepository {
+    private ArrayList<Cheese> myCheese = new ArrayList<>();
+
+    // We add a new cheese to the repository
+    public void addCheese(Cheese cheese) {
+        myCheese.add(cheese);
+    }
+
+    // We get all cheeses from the repository
+    public ArrayList<Cheese> getAllCheeses() {
+        return myCheese;
+    }
+
+    // We update cheese by its ID
+    public void updateCheeseById(int id, Cheese updatedCheese) {
+        for (int i = 0; i < myCheese.size(); i++) {
+            Cheese cheese = myCheese.get(i); // Here we get the current cheese object
+            if (cheese.getId() == id) { // Then we check if this is the cheese we want to update
+                myCheese.set(i, updatedCheese); // Then we replace the old cheese with the updated one
+                return; // And then exit the method once the cheese is updated
+            }
+        }
+        System.out.println("Cheese with ID " + id + " not found."); // If no cheese is found with the given ID
+    }
+
+    // Delete cheese by its ID
+    public void deleteCheeseById(int id) {
+        for (int i = 0; i < myCheese.size(); i++) {
+            Cheese cheese = myCheese.get(i); // This gets the current cheese object
+            if (cheese.getId() == id) { // Here we check if this is the cheese we want to delete
+                myCheese.remove(i); // This removes the cheese
+                return; // Here we exit the method once the cheese is deleted
+            }
+        }
+        System.out.println("Cheese with ID " + id + " not found."); // If no cheese is found with the given ID
+    }
+}
