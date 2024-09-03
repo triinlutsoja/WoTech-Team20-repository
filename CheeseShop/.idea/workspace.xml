@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a1e305c0-ba4f-4757-8e34-cee2ff30c5fe" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/datorium/Datorium/API/Controllers/CheeseShopController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/datorium/Datorium/API/Controllers/CheeseShopController.java" afterDir="false" />
     </list>
@@ -23,7 +24,12 @@
       <state>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Datorium-API" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -66,6 +72,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.fileTypes",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -95,7 +102,8 @@
       <option name="presentableId" value="Default" />
       <updated>1724997137439</updated>
       <workItem from="1724997138538" duration="2917000" />
-      <workItem from="1725258402590" duration="1172000" />
+      <workItem from="1725258402590" duration="1378000" />
+      <workItem from="1725344158434" duration="2697000" />
     </task>
     <servers />
   </component>

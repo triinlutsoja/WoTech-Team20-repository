@@ -1,9 +1,7 @@
 package com.datorium.Datorium.API.Controllers;
 
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
+import com.datorium.Datorium.API.DTOs.Cheese;
+import org.springframework.web.bind.annotation.*;
 
 public class CheeseShopController {
 
@@ -18,15 +16,35 @@ public class CheeseShopController {
     // CRUD methods
 
     @PostMapping("/add")
-    public Cheese addCheese(Cheese cheese){
+    public void addCheese(Cheese cheese){
         // TODO:
     }
 
-    // TODO: getCheese and getAllCheeses
+    @GetMapping("/get")
+    public Cheese getCheese(int id){  // TODO: Based on what? By id? Is not specified in the requirements
+        return cheeseShopService.getCheese(int id);
+    }
+
+    // TODO: getAllCheeses()
 
     @PutMapping("/update")
-    // TODO:
+    public void updateCheeseById(@PathVariable("id") int id, @RequestBody Cheese cheese){
+        Cheese originalCheese = getCheese(id);  // find cheese that need to be updated
+
+        if (originalCheese != null) {
+            // TODO: if Cheese.java gets the 'id' property, add this line here
+            originalCheese.setName(cheese.getName());
+            originalCheese.setPrice(cheese.getPrice());
+            originalCheese.setAvailableInStore(cheese.isAvailableInStore());
+            originalCheese.setYearOfProduction(cheese.getYearOfProduction());
+        } else {
+            // Cheese doesn't exist, so add it to the list
+            addCheese(cheese);
+        }
+    }
 
     @DeleteMapping("/delete")
-    // TODO:
+    public void deleteCheeseById(int id){
+        // TODO:
+    }
 }
