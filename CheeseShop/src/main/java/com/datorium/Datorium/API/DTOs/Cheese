@@ -1,7 +1,7 @@
 package com.datorium.Datorium.API.DTOs;
 
 public class Cheese {
-    public int id;  // New property for unique identifier
+    public int id;  // I added a new property as suggested
     public String name;
     public double price;
     public int yearOfProduction;
