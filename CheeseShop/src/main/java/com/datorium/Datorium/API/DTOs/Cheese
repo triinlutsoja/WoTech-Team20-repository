@@ -1,19 +1,29 @@
 package com.datorium.Datorium.API.DTOs;
 
 public class Cheese {
-    private String name;
-    private double price;
-    private int yearOfProduction;
-    private boolean isAvailableInStore;
+    public int id;  // New property for unique identifier
+    public String name;
+    public double price;
+    public int yearOfProduction;
+    public boolean isAvailableInStore;
 
-  
-    public Cheese(String name, double price, int yearOfProduction, boolean isAvailableInStore) {
+
+    public Cheese(int id, String name, double price, int yearOfProduction, boolean isAvailableInStore) {
+        this.id = id;
         this.name = name;
         this.price = price;
         this.yearOfProduction = yearOfProduction;
         this.isAvailableInStore = isAvailableInStore;
     }
 
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
