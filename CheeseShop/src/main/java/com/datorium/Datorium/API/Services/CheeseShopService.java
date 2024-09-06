@@ -27,7 +27,7 @@ public class CheeseShopService {
     }
 
     //Cheese used
-    public List<Cheese> getAll() {
+    public List<Cheese> getAllCheeses() {
         return repository.getAllCheeses();
     }
 
@@ -44,7 +44,7 @@ public class CheeseShopService {
     }
 
 
-    public void deleteCheese(int id) {
+    public void deleteCheeseById(int id) {
         repository.deleteCheeseById(id);
     }
 
