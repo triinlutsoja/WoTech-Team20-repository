@@ -1,7 +1,9 @@
 package com.datorium.Datorium.API;
 
 //import cheese
-//import CheeseShopRepository
+import com.datorium.Datorium.API.Repo.CheeseShopRepository;  //import CheeseShopRepository
+
+import com.datorium.Datorium.API.DTOs.Cheese;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
@@ -12,21 +14,25 @@ public class CheeseShopService {
     private final CheeseShopRepository repository;
 
     //CheeseShopRepository used
-    public CheeseShopService(CheeseShopRepository repository) {
-        this.repository = repository;
+    public CheeseShopService() {
+        repository = new CheeseShopRepository();
     }
 
-    public Cheese addCheese(Cheese cheese) {
-        return repository.save(cheese);
+    public void addCheese(Cheese cheese) {
+        repository.addCheese(cheese);
+    }
+
+    public Cheese getCheese(int id){
+        return repository.getCheese(id);
     }
 
     //Cheese used
     public List<Cheese> getAll() {
-        return repository.findAll();
+        return repository.getAllCheeses();
     }
 
     public Cheese updateCheese(Long id, Cheese updatedCheese) {
-        Cheese existingCheese = repository.findById(id)
+        Cheese existingCheese = repository.getCheese(id)
                 .orElseThrow(() -> new RuntimeException("404 Cheese not found."));
 
         existingCheese.setName(updatedCheese.getName());
@@ -34,12 +40,12 @@ public class CheeseShopService {
         existingCheese.setYearOfProduction(updatedCheese.getYearOfProduction());
         existingCheese.setAvailableInStore(updatedCheese.isAvailableInStore());
 
-        return repository.save(existingCheese);
+        return repository.getCheese(existingCheese);
     }
 
 
-    public void deleteCheese(Long id) {
-        repository.deleteById(id);
+    public void deleteCheese(int id) {
+        repository.deleteCheeseById(id);
     }
 
 }
