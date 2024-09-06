@@ -3,11 +3,15 @@ package com.datorium.Datorium.API.Controllers;
 import com.datorium.Datorium.API.DTOs.Cheese;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
+@RestController
+@RequestMapping("/cheeseshop")
 public class CheeseShopController {
 
-    CheeseShopService cheeseShopService;
+    private CheeseShopService cheeseShopService;
 
-    public CheeseShopController() {
+    public CheeseShopController() {  // constructor
         cheeseShopService = new CheeseShopService();
     }
 
@@ -17,34 +21,36 @@ public class CheeseShopController {
 
     @PostMapping("/add")
     public void addCheese(Cheese cheese){
-        // TODO:
+        cheeseShopService.addCheese(cheese);
     }
 
     @GetMapping("/get")
-    public Cheese getCheese(int id){  // TODO: Based on what? By id? Is not specified in the requirements
-        return cheeseShopService.getCheese(int id);
+    public Cheese getCheese(@RequestParam int id){
+        return cheeseShopService.getCheese(id);
     }
 
-    // TODO: getAllCheeses()
+    @GetMapping("/getAll")
+    public List<Cheese> getAllCheeses(){
+        return cheeseShopService.getAllCheeses();
+    }
 
     @PutMapping("/update")
     public void updateCheeseById(@PathVariable("id") int id, @RequestBody Cheese cheese){
         Cheese originalCheese = getCheese(id);  // find cheese that need to be updated
 
-        if (originalCheese != null) {
-            // TODO: if Cheese.java gets the 'id' property, add this line here
+        if (originalCheese != null) {  // If such cheese exists
             originalCheese.setName(cheese.getName());
             originalCheese.setPrice(cheese.getPrice());
             originalCheese.setAvailableInStore(cheese.isAvailableInStore());
             originalCheese.setYearOfProduction(cheese.getYearOfProduction());
         } else {
-            // Cheese doesn't exist, so add it to the list
+            // If no such cheese exists, add it to the mock database
             addCheese(cheese);
         }
     }
 
     @DeleteMapping("/delete")
-    public void deleteCheeseById(int id){
-        // TODO:
+    public void deleteCheeseById(@PathVariable int id){
+        cheeseShopService.deleteCheeseById(id);
     }
 }
