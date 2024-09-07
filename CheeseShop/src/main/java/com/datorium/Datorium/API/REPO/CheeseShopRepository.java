@@ -11,27 +11,28 @@ public class CheeseShopRepository {
 
     public final List<Cheese> myCheese = new ArrayList<>();
 
-    // Here I add a new cheese to the repository
+    // Here we add a new cheese to the repository
     public void addCheese(Cheese cheese) {
         myCheese.add(cheese);
     }
 
-    // Here I get all cheeses from the repository
+    // Then get all cheeses from the repository
     public List<Cheese> getAllCheeses() {
         return new ArrayList<>(myCheese);
     }
 
-    // Here I get a specific cheese 
-    public Cheese getCheese() {
-        // For simplicity, returning the first cheese or a default cheese
-        if (!myCheese.isEmpty()) {
-            return myCheese.get(0); // Or apply different logic if needed
+    // And here get a specific cheese by its ID
+    public Cheese getCheese(int id) {
+        for (Cheese cheese : myCheese) {
+            if (cheese.getId() == id) {
+                return cheese; // Return the cheese if found
+            }
         }
-        System.out.println("No cheese found.");
-        return null;  // Return null if no cheese is found
+        System.out.println("Cheese with ID " + id + " not found.");
+        return null; // Return null if no cheese is found
     }
 
-    // Update cheese by its ID
+    // This is a method to update cheese by its ID
     public void updateCheeseById(int id, Cheese updatedCheese) {
         for (int i = 0; i < myCheese.size(); i++) {
             Cheese cheese = myCheese.get(i);
