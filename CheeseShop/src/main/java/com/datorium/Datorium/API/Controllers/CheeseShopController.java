@@ -1,6 +1,6 @@
 package com.datorium.Datorium.API.Controllers;
 
-import com.datorium.Datorium.API.CheeseShopService;
+import com.datorium.Datorium.API.Services.CheeseShopService;
 import com.datorium.Datorium.API.DTOs.Cheese;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,12 +16,10 @@ public class CheeseShopController {
         cheeseShopService = new CheeseShopService();
     }
 
-    // TODO: Don't forget to specify that the URL should be /cheese-shop for all methods?
-
     // CRUD methods
 
     @PostMapping("/add")
-    public void addCheese(Cheese cheese){
+    public void addCheese(@RequestBody Cheese cheese){
         cheeseShopService.addCheese(cheese);
     }
 
@@ -35,7 +33,7 @@ public class CheeseShopController {
         return cheeseShopService.getAllCheeses();
     }
 
-    @PutMapping("/update")
+    @PutMapping("/update/{id}")
     public void updateCheeseById(@PathVariable("id") int id, @RequestBody Cheese cheese){
         Cheese originalCheese = getCheese(id);  // find cheese that need to be updated
 
@@ -50,7 +48,7 @@ public class CheeseShopController {
         }
     }
 
-    @DeleteMapping("/delete")
+    @DeleteMapping("/delete/{id}")
     public void deleteCheeseById(@PathVariable int id){
         cheeseShopService.deleteCheeseById(id);
     }
